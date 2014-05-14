@@ -22,6 +22,7 @@
 		EA9A2B6F191E0F8E00620478 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9A2B53191E0F8D00620478 /* CoreData.framework */; };
 		EA9A2B77191E0F8E00620478 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA9A2B75191E0F8E00620478 /* InfoPlist.strings */; };
 		EA9A2B79191E0F8E00620478 /* Apple_E1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9A2B78191E0F8E00620478 /* Apple_E1Tests.m */; };
+		EA9A2B83191E115B00620478 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9A2B82191E115B00620478 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		EA9A2B74191E0F8E00620478 /* Apple-E1Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Apple-E1Tests-Info.plist"; sourceTree = "<group>"; };
 		EA9A2B76191E0F8E00620478 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA9A2B78191E0F8E00620478 /* Apple_E1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Apple_E1Tests.m; sourceTree = "<group>"; };
+		EA9A2B82191E115B00620478 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				EA9A2B5E191E0F8D00620478 /* KCAppDelegate.h */,
+				EA9A2B82191E115B00620478 /* Storyboard.storyboard */,
 				EA9A2B5F191E0F8D00620478 /* KCAppDelegate.m */,
 				EA9A2B64191E0F8D00620478 /* Images.xcassets */,
 				EA9A2B61191E0F8D00620478 /* Apple_E1.xcdatamodeld */,
@@ -231,6 +234,7 @@
 			files = (
 				EA9A2B5A191E0F8D00620478 /* InfoPlist.strings in Resources */,
 				EA9A2B65191E0F8D00620478 /* Images.xcassets in Resources */,
+				EA9A2B83191E115B00620478 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
