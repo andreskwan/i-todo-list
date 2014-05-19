@@ -7,12 +7,28 @@
 //
 
 #import "KCToDoListTableViewController.h"
+#import "KCTodoItem.h"
 
 @interface KCToDoListTableViewController ()
+@property NSMutableArray * toDoItems;
 
 @end
 
 @implementation KCToDoListTableViewController
+
+- (void) loadInitialData {
+    KCTodoItem * item1 = [[KCTodoItem alloc]init];
+    item1.itemName = @"Football - add youtube feature";
+    [self.toDoItems addObject:item1];
+    
+    KCTodoItem * item2 = [[KCTodoItem alloc]init];
+    item2.itemName = @"Football - add twitter feature";
+    [self.toDoItems addObject:item2];
+    
+    KCTodoItem * item3 = [[KCTodoItem alloc]init];
+    item3.itemName = @"Football - Frontend Design";
+    [self.toDoItems addObject:item3];
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,6 +48,9 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.toDoItems = [[NSMutableArray alloc]init];
+    [self loadInitialData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,32 +59,46 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
+#pragma mark Actions
+- (IBAction)unwindToList:(UIStoryboardSegue *)sender
+{
+    
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+    //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.toDoItems count];
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+
+    static NSString *CellIdentifier = @"ListPrototypeCell";
+    KCTodoItem * todoItem = [self.toDoItems objectAtIndex:indexPath.row];
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
+                                                            forIndexPath:indexPath];
+    cell.textLabel.text = todoItem.itemName;
     
     // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -115,5 +148,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA156655192A66D30031EB89 /* KCTodoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EA156654192A66D30031EB89 /* KCTodoItem.m */; };
 		EA86A17E192412AC008829ED /* KCAddToDoItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA86A17D192412AC008829ED /* KCAddToDoItemViewController.m */; };
 		EA86A18219241800008829ED /* KCToDoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA86A18119241800008829ED /* KCToDoListTableViewController.m */; };
 		EA9A2B4E191E0F8D00620478 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9A2B4D191E0F8D00620478 /* Foundation.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA156653192A66D30031EB89 /* KCTodoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCTodoItem.h; path = model/KCTodoItem.h; sourceTree = "<group>"; };
+		EA156654192A66D30031EB89 /* KCTodoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCTodoItem.m; path = model/KCTodoItem.m; sourceTree = "<group>"; };
 		EA86A17C192412AC008829ED /* KCAddToDoItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCAddToDoItemViewController.h; path = vc/KCAddToDoItemViewController.h; sourceTree = "<group>"; };
 		EA86A17D192412AC008829ED /* KCAddToDoItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCAddToDoItemViewController.m; path = vc/KCAddToDoItemViewController.m; sourceTree = "<group>"; };
 		EA86A18019241800008829ED /* KCToDoListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCToDoListTableViewController.h; path = vc/KCToDoListTableViewController.h; sourceTree = "<group>"; };
@@ -89,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA156656192A66DA0031EB89 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA156653192A66D30031EB89 /* KCTodoItem.h */,
+				EA156654192A66D30031EB89 /* KCTodoItem.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		EA86A17F192412BD008829ED /* vc */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +148,7 @@
 			children = (
 				EA9A2B5E191E0F8D00620478 /* KCAppDelegate.h */,
 				EA9A2B82191E115B00620478 /* Storyboard.storyboard */,
+				EA156656192A66DA0031EB89 /* Model */,
 				EA86A17F192412BD008829ED /* vc */,
 				EA9A2B5F191E0F8D00620478 /* KCAppDelegate.m */,
 				EA9A2B64191E0F8D00620478 /* Images.xcassets */,
@@ -271,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA156655192A66D30031EB89 /* KCTodoItem.m in Sources */,
 				EA9A2B60191E0F8D00620478 /* KCAppDelegate.m in Sources */,
 				EA9A2B63191E0F8D00620478 /* Apple_E1.xcdatamodeld in Sources */,
 				EA86A18219241800008829ED /* KCToDoListTableViewController.m in Sources */,
