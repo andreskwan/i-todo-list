@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KCToDoListTableViewController : UITableViewController
+@interface KCToDoListTableViewController : UITableViewController <UITableViewDelegate>
 - (IBAction)unwindToList:(UIStoryboardSegue *)sender;
 @end

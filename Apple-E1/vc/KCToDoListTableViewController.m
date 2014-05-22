@@ -8,6 +8,7 @@
 
 #import "KCToDoListTableViewController.h"
 #import "KCTodoItem.h"
+#import "KCAddToDoItemViewController.h"
 
 @interface KCToDoListTableViewController ()
 @property NSMutableArray * toDoItems;
@@ -29,6 +30,7 @@
     item3.itemName = @"Football - Frontend Design";
     [self.toDoItems addObject:item3];
 }
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -64,6 +66,18 @@
 #pragma mark Actions
 - (IBAction)unwindToList:(UIStoryboardSegue *)sender
 {
+    //asking the segue obj for its source view controller
+    //to access any data stored in the source view controller
+    KCAddToDoItemViewController * vcSource = [[KCAddToDoItemViewController alloc]init];
+    vcSource = [sender sourceViewController];
+    
+    if ([vcSource isKindOfClass:[KCAddToDoItemViewController class]]) {
+        if (vcSource.todoItem) {
+            [self.toDoItems addObject:vcSource.todoItem];
+            //reload the tableView data
+            [self.tableView reloadData];
+        }
+    }
     
 }
 
@@ -75,7 +89,8 @@
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section
 {
     //#warning Incomplete method implementation.
     // Return the number of rows in the section.
@@ -93,7 +108,11 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
                                                             forIndexPath:indexPath];
     cell.textLabel.text = todoItem.itemName;
-    
+    if (todoItem.completed) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     // Configure the cell...
     
     return cell;
@@ -149,6 +168,21 @@
 }
 */
 
-
+#pragma mark - Table view delegate
+//when a cell gets selected
+- (void) tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath
+                             animated:NO];
+    KCTodoItem * tappedItem = [self.toDoItems objectAtIndex:indexPath.row];
+    //do not delete it, just
+    //toogle its state
+    tappedItem.completed = !tappedItem.completed;
+    
+    [tableView reloadRowsAtIndexPaths:@[indexPath]
+                     withRowAnimation:UITableViewRowAnimationNone];
+    
+}
 
 @end
