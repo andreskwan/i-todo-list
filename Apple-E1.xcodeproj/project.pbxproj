@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EA156655192A66D30031EB89 /* KCTodoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EA156654192A66D30031EB89 /* KCTodoItem.m */; };
+		EA26352819339BBD00ABBB04 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA26352719339BBD00ABBB04 /* ToDo.m */; };
 		EA86A17E192412AC008829ED /* KCAddToDoItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA86A17D192412AC008829ED /* KCAddToDoItemViewController.m */; };
 		EA86A18219241800008829ED /* KCToDoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA86A18119241800008829ED /* KCToDoListTableViewController.m */; };
 		EA9A2B4E191E0F8D00620478 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9A2B4D191E0F8D00620478 /* Foundation.framework */; };
@@ -41,11 +42,13 @@
 /* Begin PBXFileReference section */
 		EA156653192A66D30031EB89 /* KCTodoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCTodoItem.h; path = model/KCTodoItem.h; sourceTree = "<group>"; };
 		EA156654192A66D30031EB89 /* KCTodoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCTodoItem.m; path = model/KCTodoItem.m; sourceTree = "<group>"; };
+		EA26352619339BBD00ABBB04 /* ToDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToDo.h; path = model/ToDo.h; sourceTree = "<group>"; };
+		EA26352719339BBD00ABBB04 /* ToDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToDo.m; path = model/ToDo.m; sourceTree = "<group>"; };
 		EA86A17C192412AC008829ED /* KCAddToDoItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCAddToDoItemViewController.h; path = vc/KCAddToDoItemViewController.h; sourceTree = "<group>"; };
 		EA86A17D192412AC008829ED /* KCAddToDoItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCAddToDoItemViewController.m; path = vc/KCAddToDoItemViewController.m; sourceTree = "<group>"; };
 		EA86A18019241800008829ED /* KCToDoListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCToDoListTableViewController.h; path = vc/KCToDoListTableViewController.h; sourceTree = "<group>"; };
 		EA86A18119241800008829ED /* KCToDoListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCToDoListTableViewController.m; path = vc/KCToDoListTableViewController.m; sourceTree = "<group>"; };
-		EA9A2B4A191E0F8D00620478 /* Apple-E1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple-E1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA9A2B4A191E0F8D00620478 /* PomoToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomoToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9A2B4D191E0F8D00620478 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA9A2B4F191E0F8D00620478 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		EA9A2B51191E0F8D00620478 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -95,6 +98,8 @@
 		EA156656192A66DA0031EB89 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EA26352619339BBD00ABBB04 /* ToDo.h */,
+				EA26352719339BBD00ABBB04 /* ToDo.m */,
 				EA156653192A66D30031EB89 /* KCTodoItem.h */,
 				EA156654192A66D30031EB89 /* KCTodoItem.m */,
 			);
@@ -125,7 +130,7 @@
 		EA9A2B4B191E0F8D00620478 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA9A2B4A191E0F8D00620478 /* Apple-E1.app */,
+				EA9A2B4A191E0F8D00620478 /* PomoToDo.app */,
 				EA9A2B6A191E0F8E00620478 /* Apple-E1Tests.xctest */,
 			);
 			name = Products;
@@ -147,12 +152,12 @@
 			isa = PBXGroup;
 			children = (
 				EA9A2B5E191E0F8D00620478 /* KCAppDelegate.h */,
+				EA9A2B5F191E0F8D00620478 /* KCAppDelegate.m */,
 				EA9A2B82191E115B00620478 /* Storyboard.storyboard */,
+				EA9A2B61191E0F8D00620478 /* Apple_E1.xcdatamodeld */,
 				EA156656192A66DA0031EB89 /* Model */,
 				EA86A17F192412BD008829ED /* vc */,
-				EA9A2B5F191E0F8D00620478 /* KCAppDelegate.m */,
 				EA9A2B64191E0F8D00620478 /* Images.xcassets */,
-				EA9A2B61191E0F8D00620478 /* Apple_E1.xcdatamodeld */,
 				EA9A2B56191E0F8D00620478 /* Supporting Files */,
 			);
 			path = "Apple-E1";
@@ -190,9 +195,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EA9A2B49191E0F8D00620478 /* Apple-E1 */ = {
+		EA9A2B49191E0F8D00620478 /* PomoToDo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA9A2B7C191E0F8E00620478 /* Build configuration list for PBXNativeTarget "Apple-E1" */;
+			buildConfigurationList = EA9A2B7C191E0F8E00620478 /* Build configuration list for PBXNativeTarget "PomoToDo" */;
 			buildPhases = (
 				EA9A2B46191E0F8D00620478 /* Sources */,
 				EA9A2B47191E0F8D00620478 /* Frameworks */,
@@ -202,9 +207,9 @@
 			);
 			dependencies = (
 			);
-			name = "Apple-E1";
+			name = PomoToDo;
 			productName = "Apple-E1";
-			productReference = EA9A2B4A191E0F8D00620478 /* Apple-E1.app */;
+			productReference = EA9A2B4A191E0F8D00620478 /* PomoToDo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		EA9A2B69191E0F8E00620478 /* Apple-E1Tests */ = {
@@ -252,7 +257,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EA9A2B49191E0F8D00620478 /* Apple-E1 */,
+				EA9A2B49191E0F8D00620478 /* PomoToDo */,
 				EA9A2B69191E0F8E00620478 /* Apple-E1Tests */,
 			);
 		};
@@ -284,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA26352819339BBD00ABBB04 /* ToDo.m in Sources */,
 				EA156655192A66D30031EB89 /* KCTodoItem.m in Sources */,
 				EA9A2B60191E0F8D00620478 /* KCAppDelegate.m in Sources */,
 				EA9A2B63191E0F8D00620478 /* Apple_E1.xcdatamodeld in Sources */,
@@ -306,7 +312,7 @@
 /* Begin PBXTargetDependency section */
 		EA9A2B71191E0F8E00620478 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EA9A2B49191E0F8D00620478 /* Apple-E1 */;
+			target = EA9A2B49191E0F8D00620478 /* PomoToDo */;
 			targetProxy = EA9A2B70191E0F8E00620478 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -479,7 +485,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA9A2B7C191E0F8E00620478 /* Build configuration list for PBXNativeTarget "Apple-E1" */ = {
+		EA9A2B7C191E0F8E00620478 /* Build configuration list for PBXNativeTarget "PomoToDo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA9A2B7D191E0F8E00620478 /* Debug */,

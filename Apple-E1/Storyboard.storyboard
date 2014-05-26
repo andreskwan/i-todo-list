@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dls-cw-PtN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dls-cw-PtN">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -67,12 +67,61 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jom-B7-hIh">
+                                <rect key="frame" x="20" y="188" width="280" height="360"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eY-GJ-Y9I">
+                                <rect key="frame" x="20" y="159" width="140" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ZK-yO-DUa">
+                                <rect key="frame" x="160" y="159" width="140" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bi3-Zf-lDw">
+                                <rect key="frame" x="20" y="126" width="140" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pomodoros:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uf0-1T-2JM">
+                                <rect key="frame" x="160" y="126" width="140" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="iDJ-bi-1qR" firstAttribute="leading" secondItem="puf-ND-XX3" secondAttribute="leading" constant="20" id="18I-Vs-iXg"/>
-                            <constraint firstItem="iDJ-bi-1qR" firstAttribute="top" secondItem="MtU-wI-3eN" secondAttribute="bottom" constant="24" id="oFx-0K-eZk"/>
-                            <constraint firstAttribute="trailing" secondItem="iDJ-bi-1qR" secondAttribute="trailing" constant="20" id="owa-gg-6hh"/>
+                            <constraint firstItem="bi3-Zf-lDw" firstAttribute="top" secondItem="MtU-wI-3eN" secondAttribute="bottom" constant="62" id="2yc-Fz-o8M"/>
+                            <constraint firstItem="iDJ-bi-1qR" firstAttribute="top" secondItem="MtU-wI-3eN" secondAttribute="bottom" constant="24" id="3Zy-k9-yxI"/>
+                            <constraint firstAttribute="trailing" secondItem="9ZK-yO-DUa" secondAttribute="trailing" constant="20" id="9HK-l1-216"/>
+                            <constraint firstAttribute="trailing" secondItem="uf0-1T-2JM" secondAttribute="trailing" constant="20" id="AfJ-R7-T6E"/>
+                            <constraint firstAttribute="bottom" secondItem="jom-B7-hIh" secondAttribute="bottom" constant="20" symbolic="YES" id="BHk-Nh-nrZ"/>
+                            <constraint firstItem="uf0-1T-2JM" firstAttribute="top" secondItem="MtU-wI-3eN" secondAttribute="bottom" constant="62" id="HD7-Pc-4hf"/>
+                            <constraint firstItem="iDJ-bi-1qR" firstAttribute="leading" secondItem="puf-ND-XX3" secondAttribute="leading" constant="20" id="I9P-qv-0On"/>
+                            <constraint firstItem="7eY-GJ-Y9I" firstAttribute="leading" secondItem="puf-ND-XX3" secondAttribute="leading" constant="20" id="IpU-9G-t1O"/>
+                            <constraint firstAttribute="trailing" secondItem="iDJ-bi-1qR" secondAttribute="trailing" constant="20" id="JuI-8q-qIG"/>
+                            <constraint firstItem="bi3-Zf-lDw" firstAttribute="leading" secondItem="puf-ND-XX3" secondAttribute="leading" constant="20" id="WVi-o9-OeW"/>
+                            <constraint firstItem="9ZK-yO-DUa" firstAttribute="leading" secondItem="puf-ND-XX3" secondAttribute="leading" constant="160" id="bn7-hL-nm8"/>
+                            <constraint firstAttribute="trailing" secondItem="jom-B7-hIh" secondAttribute="trailing" constant="20" id="bug-cb-qXj"/>
+                            <constraint firstAttribute="trailing" secondItem="7eY-GJ-Y9I" secondAttribute="trailing" constant="160" id="e9L-Oe-ZtV"/>
+                            <constraint firstAttribute="trailing" secondItem="bi3-Zf-lDw" secondAttribute="trailing" constant="160" id="etJ-Ie-AfY"/>
+                            <constraint firstItem="7eY-GJ-Y9I" firstAttribute="top" secondItem="MtU-wI-3eN" secondAttribute="bottom" constant="95" id="hlU-Wm-uBt"/>
+                            <constraint firstItem="uf0-1T-2JM" firstAttribute="leading" secondItem="puf-ND-XX3" secondAttribute="leading" constant="160" id="lMZ-p8-s42"/>
+                            <constraint firstItem="9ZK-yO-DUa" firstAttribute="top" secondItem="MtU-wI-3eN" secondAttribute="bottom" constant="95" id="mRL-4b-5TY"/>
+                            <constraint firstItem="jom-B7-hIh" firstAttribute="leading" secondItem="puf-ND-XX3" secondAttribute="leading" constant="20" id="rer-zu-l8m"/>
+                            <constraint firstItem="jom-B7-hIh" firstAttribute="top" secondItem="MtU-wI-3eN" secondAttribute="bottom" constant="124" id="zFt-LU-MSu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add To-Do Item" id="Um9-kY-a39">

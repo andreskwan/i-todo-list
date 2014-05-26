@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EA9A2B49191E0F8D00620478"
-               BuildableName = "Apple-E1.app"
-               BlueprintName = "Apple-E1"
+               BuildableName = "PomoToDo.app"
+               BlueprintName = "PomoToDo"
                ReferencedContainer = "container:Apple-E1.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EA9A2B49191E0F8D00620478"
-            BuildableName = "Apple-E1.app"
-            BlueprintName = "Apple-E1"
+            BuildableName = "PomoToDo.app"
+            BlueprintName = "PomoToDo"
             ReferencedContainer = "container:Apple-E1.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EA9A2B49191E0F8D00620478"
-            BuildableName = "Apple-E1.app"
-            BlueprintName = "Apple-E1"
+            BuildableName = "PomoToDo.app"
+            BlueprintName = "PomoToDo"
             ReferencedContainer = "container:Apple-E1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -80,8 +80,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EA9A2B49191E0F8D00620478"
-            BuildableName = "Apple-E1.app"
-            BlueprintName = "Apple-E1"
+            BuildableName = "PomoToDo.app"
+            BlueprintName = "PomoToDo"
             ReferencedContainer = "container:Apple-E1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
