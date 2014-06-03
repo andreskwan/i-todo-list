@@ -27,6 +27,7 @@
 		EA9A2B77191E0F8E00620478 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA9A2B75191E0F8E00620478 /* InfoPlist.strings */; };
 		EA9A2B79191E0F8E00620478 /* Apple_E1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9A2B78191E0F8E00620478 /* Apple_E1Tests.m */; };
 		EA9A2B83191E115B00620478 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9A2B82191E115B00620478 /* Storyboard.storyboard */; };
+		EAE6260D193DD02B00C5E346 /* KCCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE6260C193DD02B00C5E346 /* KCCoreDataStack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		EA9A2B76191E0F8E00620478 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA9A2B78191E0F8E00620478 /* Apple_E1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Apple_E1Tests.m; sourceTree = "<group>"; };
 		EA9A2B82191E115B00620478 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		EAE6260B193DD02B00C5E346 /* KCCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCCoreDataStack.h; path = model/KCCoreDataStack.h; sourceTree = "<group>"; };
+		EAE6260C193DD02B00C5E346 /* KCCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCCoreDataStack.m; path = model/KCCoreDataStack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,8 @@
 				EA86A17F192412BD008829ED /* vc */,
 				EA9A2B64191E0F8D00620478 /* Images.xcassets */,
 				EA9A2B56191E0F8D00620478 /* Supporting Files */,
+				EAE6260B193DD02B00C5E346 /* KCCoreDataStack.h */,
+				EAE6260C193DD02B00C5E346 /* KCCoreDataStack.m */,
 			);
 			path = "Apple-E1";
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 				EA26352819339BBD00ABBB04 /* ToDo.m in Sources */,
 				EA156655192A66D30031EB89 /* KCTodoItem.m in Sources */,
 				EA9A2B60191E0F8D00620478 /* KCAppDelegate.m in Sources */,
+				EAE6260D193DD02B00C5E346 /* KCCoreDataStack.m in Sources */,
 				EA9A2B63191E0F8D00620478 /* Apple_E1.xcdatamodeld in Sources */,
 				EA86A18219241800008829ED /* KCToDoListTableViewController.m in Sources */,
 				EA9A2B5C191E0F8D00620478 /* main.m in Sources */,
