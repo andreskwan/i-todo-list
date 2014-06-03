@@ -98,18 +98,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EA156656192A66DA0031EB89 /* Model */ = {
+		EA156656192A66DA0031EB89 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				EAE6260B193DD02B00C5E346 /* KCCoreDataStack.h */,
+				EAE6260C193DD02B00C5E346 /* KCCoreDataStack.m */,
+				EA9A2B61191E0F8D00620478 /* Apple_E1.xcdatamodeld */,
 				EA26352619339BBD00ABBB04 /* ToDo.h */,
 				EA26352719339BBD00ABBB04 /* ToDo.m */,
 				EA156653192A66D30031EB89 /* KCTodoItem.h */,
 				EA156654192A66D30031EB89 /* KCTodoItem.m */,
 			);
-			name = Model;
+			name = model;
 			sourceTree = "<group>";
 		};
-		EA86A17F192412BD008829ED /* vc */ = {
+		EA86A17F192412BD008829ED /* controller */ = {
 			isa = PBXGroup;
 			children = (
 				EA86A18019241800008829ED /* KCToDoListTableViewController.h */,
@@ -117,7 +120,7 @@
 				EA86A17C192412AC008829ED /* KCAddToDoItemViewController.h */,
 				EA86A17D192412AC008829ED /* KCAddToDoItemViewController.m */,
 			);
-			name = vc;
+			name = controller;
 			sourceTree = "<group>";
 		};
 		EA9A2B41191E0F8D00620478 = {
@@ -156,14 +159,10 @@
 			children = (
 				EA9A2B5E191E0F8D00620478 /* KCAppDelegate.h */,
 				EA9A2B5F191E0F8D00620478 /* KCAppDelegate.m */,
-				EA9A2B82191E115B00620478 /* Storyboard.storyboard */,
-				EA9A2B61191E0F8D00620478 /* Apple_E1.xcdatamodeld */,
-				EA156656192A66DA0031EB89 /* Model */,
-				EA86A17F192412BD008829ED /* vc */,
-				EA9A2B64191E0F8D00620478 /* Images.xcassets */,
+				EAE62611193DD22000C5E346 /* view */,
+				EA156656192A66DA0031EB89 /* model */,
+				EA86A17F192412BD008829ED /* controller */,
 				EA9A2B56191E0F8D00620478 /* Supporting Files */,
-				EAE6260B193DD02B00C5E346 /* KCCoreDataStack.h */,
-				EAE6260C193DD02B00C5E346 /* KCCoreDataStack.m */,
 			);
 			path = "Apple-E1";
 			sourceTree = "<group>";
@@ -195,6 +194,15 @@
 				EA9A2B75191E0F8E00620478 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EAE62611193DD22000C5E346 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				EA9A2B64191E0F8D00620478 /* Images.xcassets */,
+				EA9A2B82191E115B00620478 /* Storyboard.storyboard */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
