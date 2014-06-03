@@ -7,30 +7,19 @@
 //
 
 #import "KCToDoListTableViewController.h"
-#import "KCTodoItem.h"
 #import "KCAddToDoItemViewController.h"
+#import "ToDo.h"
+#import "KCCoreDataStack.h"
 
-@interface KCToDoListTableViewController ()
-@property NSMutableArray * toDoItems;
-
+@interface KCToDoListTableViewController () <NSFetchedResultsControllerDelegate>
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @end
 
 @implementation KCToDoListTableViewController
 
 - (void) loadInitialData {
-    KCTodoItem * item1 = [[KCTodoItem alloc]init];
-    item1.itemName = @"Football - add youtube feature";
-    [self.toDoItems addObject:item1];
-    
-    KCTodoItem * item2 = [[KCTodoItem alloc]init];
-    item2.itemName = @"Football - add twitter feature";
-    [self.toDoItems addObject:item2];
-    
-    KCTodoItem * item3 = [[KCTodoItem alloc]init];
-    item3.itemName = @"Football - Frontend Design";
-    [self.toDoItems addObject:item3];
-}
 
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -50,9 +39,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    self.toDoItems = [[NSMutableArray alloc]init];
-    [self loadInitialData];
+    [self.fetchedResultsController performFetch:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,40 +48,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
-//#pragma mark Actions
-//- (IBAction)unwindToList:(UIStoryboardSegue *)sender
-//{
-//    //asking the segue obj for its source view controller
-//    //to access any data stored in the source view controller
-//    KCAddToDoItemViewController * vcSource = [[KCAddToDoItemViewController alloc]init];
-//    vcSource = [sender sourceViewController];
-//    
-//    if ([vcSource isKindOfClass:[KCAddToDoItemViewController class]]) {
-//        if (vcSource.todoItem) {
-//            [self.toDoItems addObject:vcSource.todoItem];
-//            //reload the tableView data
-//            [self.tableView reloadData];
-//        }
-//    }
-//    
-//}
-
+-(void)controllerDidChangeContent:(NSFetchedResultsController *)controller
+{
+    [self.tableView reloadData];
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return self.fetchedResultsController.sections.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    //#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return [self.toDoItems count];
+    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
+    
+    return [sectionInfo numberOfObjects];
 }
 
 
@@ -102,13 +73,13 @@
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    static NSString *CellIdentifier = @"ListPrototypeCell";
-    KCTodoItem * todoItem = [self.toDoItems objectAtIndex:indexPath.row];
+    static NSString *CellIdentifier = @"Cell";
+    ToDo * todoEntry = [self.fetchedResultsController objectAtIndexPath:indexPath];
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
                                                             forIndexPath:indexPath];
-    cell.textLabel.text = todoItem.itemName;
-    if (todoItem.completed) {
+    cell.textLabel.text = todoEntry.name;
+    if (todoEntry.completed) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     } else {
         cell.accessoryType = UITableViewCellAccessoryNone;
@@ -175,14 +146,66 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath
                              animated:NO];
-    KCTodoItem * tappedItem = [self.toDoItems objectAtIndex:indexPath.row];
+//    KCTodoItem * tappedItem = [self.toDoItems objectAtIndex:indexPath.row];
     //do not delete it, just
     //toogle its state
-    tappedItem.completed = !tappedItem.completed;
+//    tappedItem.completed = !tappedItem.completed;
     
     [tableView reloadRowsAtIndexPaths:@[indexPath]
                      withRowAnimation:UITableViewRowAnimationNone];
     
 }
+
+#pragma mark CoreData Stack
+-(NSFetchRequest *) entryListFetchRequest
+{
+    NSFetchRequest * fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"ToDo"];
+    
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"dateCreated"
+                                                                   ascending:NO]];
+    return fetchRequest;
+}
+
+-(NSFetchedResultsController *)fetchedResultsController {
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
+    }
+    KCCoreDataStack * coreDataStack = [KCCoreDataStack defaultStack];
+    NSFetchRequest  * fetchRequest  = [self entryListFetchRequest];
+    
+    _fetchedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:fetchRequest
+                                                                   managedObjectContext:coreDataStack.managedObjectContext
+                                                                     sectionNameKeyPath:nil
+                                                                              cacheName:nil];
+    _fetchedResultsController.delegate = self;
+    
+    return _fetchedResultsController;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end
