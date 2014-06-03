@@ -137,6 +137,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="textField" destination="iDJ-bi-1qR" id="FEx-F6-n26"/>
+                        <outlet property="textViewDescription" destination="jom-B7-hIh" id="ObE-O7-qhH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="slL-Tg-jFk" userLabel="First Responder" sceneMemberID="firstResponder"/>

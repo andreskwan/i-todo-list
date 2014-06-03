@@ -7,9 +7,12 @@
 //
 
 #import "KCAddToDoItemViewController.h"
+#import "KCCoreDataStack.h"
+#import "ToDo.h"
 
 @interface KCAddToDoItemViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextView *textViewDescription;
 
 
 @end
@@ -47,6 +50,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void) insertDiaryEntry
+{
+    KCCoreDataStack *coreDataStack = [KCCoreDataStack defaultStack];
+    ToDo *entry = [NSEntityDescription insertNewObjectForEntityForName:@"ToDo" inManagedObjectContext:coreDataStack.managedObjectContext];
+    entry.name            = self.textField.text;
+    entry.toDoDescription = self.textViewDescription.text;
+    entry.completed       = NO;
+    [coreDataStack saveContext];
+}
+
 - (IBAction)doneWasPress:(id)sender {
     [self dismissSelf];
 }
