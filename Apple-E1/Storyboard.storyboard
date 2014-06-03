@@ -126,22 +126,20 @@
                     <navigationItem key="navigationItem" title="Add To-Do Item" id="Um9-kY-a39">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="241-Y0-zP8">
                             <connections>
-                                <segue destination="wGh-Wa-9fs" kind="unwind" unwindAction="unwindToList:" id="QLr-XG-Nkf"/>
+                                <action selector="cancelWasPress:" destination="suD-Jc-q8y" id="uBF-CP-g6s"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="gd9-wf-qrg">
                             <connections>
-                                <segue destination="wGh-Wa-9fs" kind="unwind" unwindAction="unwindToList:" id="PmM-3g-uIs"/>
+                                <action selector="doneWasPress:" destination="suD-Jc-q8y" id="Chm-tn-IWJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="doneButton" destination="gd9-wf-qrg" id="hdh-a8-Ok7"/>
                         <outlet property="textField" destination="iDJ-bi-1qR" id="FEx-F6-n26"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="slL-Tg-jFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="wGh-Wa-9fs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="626" y="-908"/>
         </scene>

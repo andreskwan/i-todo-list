@@ -10,7 +10,7 @@
 
 @interface KCAddToDoItemViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+
 
 @end
 
@@ -47,20 +47,16 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-#pragma mark Segue navigation
--(void) prepareForSegue:(UIStoryboardSegue *)segue
-                 sender:(id)sender
-{
-    if (sender != self.doneButton) {
-        return;
-    }
-    if (self.textField.text.length > 0 ) {
-//        NSLog(@"self.textField.text: %@",self.textField.text);
-        self.todoItem = [[KCTodoItem alloc]init];
-        self.todoItem.itemName = self.textField.text;
-        self.todoItem.completed = NO;
-    }
+- (IBAction)doneWasPress:(id)sender {
+    [self dismissSelf];
+}
+- (IBAction)cancelWasPress:(id)sender {
+    [self dismissSelf];
 }
 
+-(void)dismissSelf
+{
+    [self.presentingViewController dismissViewControllerAnimated:YES
+                                                      completion:nil];
+}
 @end
