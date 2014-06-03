@@ -2,7 +2,7 @@
 //  ToDo.m
 //  Apple-E1
 //
-//  Created by Andres Kwan on 5/26/14.
+//  Created by Andres Kwan on 6/3/14.
 //  Copyright (c) 2014 Kwan. All rights reserved.
 //
 
@@ -11,11 +11,12 @@
 
 @implementation ToDo
 
-@dynamic name;
+@dynamic completed;
 @dynamic dateCreated;
 @dynamic dateFinished;
 @dynamic dateStarted;
+@dynamic name;
 @dynamic toDoDescription;
-@dynamic completed;
+@dynamic pomodoros;
 
 @end

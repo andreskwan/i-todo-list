@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EA156655192A66D30031EB89 /* KCTodoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EA156654192A66D30031EB89 /* KCTodoItem.m */; };
-		EA26352819339BBD00ABBB04 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA26352719339BBD00ABBB04 /* ToDo.m */; };
 		EA86A17E192412AC008829ED /* KCAddToDoItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA86A17D192412AC008829ED /* KCAddToDoItemViewController.m */; };
 		EA86A18219241800008829ED /* KCToDoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA86A18119241800008829ED /* KCToDoListTableViewController.m */; };
 		EA9A2B4E191E0F8D00620478 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9A2B4D191E0F8D00620478 /* Foundation.framework */; };
@@ -28,6 +27,7 @@
 		EA9A2B79191E0F8E00620478 /* Apple_E1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9A2B78191E0F8E00620478 /* Apple_E1Tests.m */; };
 		EA9A2B83191E115B00620478 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9A2B82191E115B00620478 /* Storyboard.storyboard */; };
 		EAE6260D193DD02B00C5E346 /* KCCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE6260C193DD02B00C5E346 /* KCCoreDataStack.m */; };
+		EAE6261A193DDD5400C5E346 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE62619193DDD5400C5E346 /* ToDo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +43,6 @@
 /* Begin PBXFileReference section */
 		EA156653192A66D30031EB89 /* KCTodoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCTodoItem.h; path = model/KCTodoItem.h; sourceTree = "<group>"; };
 		EA156654192A66D30031EB89 /* KCTodoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCTodoItem.m; path = model/KCTodoItem.m; sourceTree = "<group>"; };
-		EA26352619339BBD00ABBB04 /* ToDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToDo.h; path = model/ToDo.h; sourceTree = "<group>"; };
-		EA26352719339BBD00ABBB04 /* ToDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToDo.m; path = model/ToDo.m; sourceTree = "<group>"; };
 		EA86A17C192412AC008829ED /* KCAddToDoItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCAddToDoItemViewController.h; path = vc/KCAddToDoItemViewController.h; sourceTree = "<group>"; };
 		EA86A17D192412AC008829ED /* KCAddToDoItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCAddToDoItemViewController.m; path = vc/KCAddToDoItemViewController.m; sourceTree = "<group>"; };
 		EA86A18019241800008829ED /* KCToDoListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCToDoListTableViewController.h; path = vc/KCToDoListTableViewController.h; sourceTree = "<group>"; };
@@ -70,6 +68,8 @@
 		EA9A2B82191E115B00620478 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		EAE6260B193DD02B00C5E346 /* KCCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCCoreDataStack.h; path = model/KCCoreDataStack.h; sourceTree = "<group>"; };
 		EAE6260C193DD02B00C5E346 /* KCCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCCoreDataStack.m; path = model/KCCoreDataStack.m; sourceTree = "<group>"; };
+		EAE62618193DDD5400C5E346 /* ToDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToDo.h; path = model/ToDo.h; sourceTree = "<group>"; };
+		EAE62619193DDD5400C5E346 /* ToDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToDo.m; path = model/ToDo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +104,8 @@
 				EAE6260B193DD02B00C5E346 /* KCCoreDataStack.h */,
 				EAE6260C193DD02B00C5E346 /* KCCoreDataStack.m */,
 				EA9A2B61191E0F8D00620478 /* Apple_E1.xcdatamodeld */,
-				EA26352619339BBD00ABBB04 /* ToDo.h */,
-				EA26352719339BBD00ABBB04 /* ToDo.m */,
+				EAE62618193DDD5400C5E346 /* ToDo.h */,
+				EAE62619193DDD5400C5E346 /* ToDo.m */,
 				EA156653192A66D30031EB89 /* KCTodoItem.h */,
 				EA156654192A66D30031EB89 /* KCTodoItem.m */,
 			);
@@ -302,7 +302,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA26352819339BBD00ABBB04 /* ToDo.m in Sources */,
 				EA156655192A66D30031EB89 /* KCTodoItem.m in Sources */,
 				EA9A2B60191E0F8D00620478 /* KCAppDelegate.m in Sources */,
 				EAE6260D193DD02B00C5E346 /* KCCoreDataStack.m in Sources */,
@@ -310,6 +309,7 @@
 				EA86A18219241800008829ED /* KCToDoListTableViewController.m in Sources */,
 				EA9A2B5C191E0F8D00620478 /* main.m in Sources */,
 				EA86A17E192412AC008829ED /* KCAddToDoItemViewController.m in Sources */,
+				EAE6261A193DDD5400C5E346 /* ToDo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

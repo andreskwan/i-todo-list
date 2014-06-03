@@ -2,7 +2,7 @@
 //  ToDo.h
 //  Apple-E1
 //
-//  Created by Andres Kwan on 5/26/14.
+//  Created by Andres Kwan on 6/3/14.
 //  Copyright (c) 2014 Kwan. All rights reserved.
 //
 
@@ -12,11 +12,12 @@
 
 @interface ToDo : NSManagedObject
 
+@property (nonatomic) BOOL completed;
+@property (nonatomic) NSTimeInterval dateCreated;
+@property (nonatomic) NSTimeInterval dateFinished;
+@property (nonatomic) NSTimeInterval dateStarted;
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSDate * dateCreated;
-@property (nonatomic, retain) NSDate * dateFinished;
-@property (nonatomic, retain) NSDate * dateStarted;
 @property (nonatomic, retain) NSString * toDoDescription;
-@property (nonatomic, retain) NSNumber * completed;
+@property (nonatomic) int16_t pomodoros;
 
 @end
