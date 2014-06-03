@@ -48,10 +48,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - NSFetchedResultsControllerDelegate
 -(void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
     [self.tableView reloadData];
 }
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -180,8 +182,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     _fetchedResultsController.delegate = self;
     
     return _fetchedResultsController;
-    
-    
 }
 
 
