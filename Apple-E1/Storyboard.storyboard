@@ -38,16 +38,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Flat Pomodoro " id="Bg1-XM-TJk">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="ADk-rU-56E"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FjF-Jn-ATs">
                             <connections>
                                 <segue destination="Ixt-Vi-V9e" kind="modal" id="qWU-u5-Oco"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="editTableButton" destination="ADk-rU-56E" id="4gV-dR-FR4"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z8F-VS-hPQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

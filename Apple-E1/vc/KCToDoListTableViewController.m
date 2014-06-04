@@ -12,7 +12,6 @@
 #import "KCCoreDataStack.h"
 
 @interface KCToDoListTableViewController () <NSFetchedResultsControllerDelegate>
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *editTableButton;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @end
 
@@ -40,7 +39,6 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
     [self.fetchedResultsController performFetch:nil];
 }
 
@@ -50,24 +48,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)setEditing:(BOOL)editing animated:(BOOL)animated {
-    
-    [super setEditing:editing animated:animated];
-    
-    if(editing) {
-        //Do something for edit mode
-    }
-    
-    else {
-        //Do something for non-edit mode
-    }
-    
-    NSLog(@"edit was pressed");
-}
-//-(void)loadView
-//{
-//
-//}
+
 #pragma mark - NSFetchedResultsControllerDelegate
 -(void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
@@ -75,6 +56,21 @@
 }
 
 #pragma mark - Table view data source
+
+//this one should be enough to implement the swipe-to-delete
+- (void)tableView:(UITableView *)tableView
+commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //1) obtain the obj that we want to delete
+    ToDo *todoEntry = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    //2) obtain the core data context
+    KCCoreDataStack * coreDataStack = [KCCoreDataStack defaultStack];
+    //3) delete the entry using the context
+    [[coreDataStack managedObjectContext] deleteObject:todoEntry];
+    //4) save the change in the context
+    [coreDataStack saveContext];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -168,6 +164,13 @@ titleForHeaderInSection:(NSInteger)section
 */
 
 #pragma mark - Table view delegate
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //this is how I'm going to validate that this method is required
+    //not needed!!! if I change for insert do not allow swipe-to-delete
+    return UITableViewCellEditingStyleDelete;
+}
+
 //when a cell gets selected
 - (void) tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath
