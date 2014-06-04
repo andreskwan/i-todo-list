@@ -50,9 +50,61 @@
 
 
 #pragma mark - NSFetchedResultsControllerDelegate
+-(void)controller:(NSFetchedResultsController *)controller
+ didChangeSection:(id<NSFetchedResultsSectionInfo>)sectionInfo
+          atIndex:(NSUInteger)sectionIndex
+    forChangeType:(NSFetchedResultsChangeType)type
+{
+    switch (type) {
+        case NSFetchedResultsChangeInsert:
+            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+        case NSFetchedResultsChangeDelete:
+            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+                NSLog(@"deleted section\n");
+            break;
+        default:
+            break;
+    }
+}
+
+-(void)controller:(NSFetchedResultsController *)controller
+  didChangeObject:(id)anObject
+      atIndexPath:(NSIndexPath *)indexPath
+    forChangeType:(NSFetchedResultsChangeType)type
+     newIndexPath:(NSIndexPath *)newIndexPath
+{
+    switch (type) {
+        case NSFetchedResultsChangeInsert:
+            [self.tableView insertRowsAtIndexPaths:@[newIndexPath]
+                                  withRowAnimation:UITableViewRowAnimationRight];
+            NSLog(@"Insert item\n");
+
+            break;
+        case NSFetchedResultsChangeDelete:
+            [self.tableView deleteRowsAtIndexPaths:@[indexPath]
+                                  withRowAnimation:UITableViewRowAnimationFade];
+                NSLog(@"deleted item\n");
+            break;
+        case NSFetchedResultsChangeUpdate:
+            [self.tableView reloadRowsAtIndexPaths:@[indexPath]
+                                  withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+        default:
+            break;
+    }
+}
+
+-(void)controllerWillChangeContent:(NSFetchedResultsController *)controller
+{
+    [self.tableView beginUpdates];
+}
+
 -(void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
-    [self.tableView reloadData];
+     NSLog(@"didChangeContent item\n");
+//    [self.tableView reloadData];
+    [self.tableView endUpdates];
 }
 
 #pragma mark - Table view data source
@@ -76,6 +128,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return the number of sections.
     return self.fetchedResultsController.sections.count;
+
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
