@@ -12,6 +12,7 @@
 #import "KCCoreDataStack.h"
 
 @interface KCToDoListTableViewController () <NSFetchedResultsControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *editTableButton;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @end
 
@@ -39,6 +40,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
     [self.fetchedResultsController performFetch:nil];
 }
 
@@ -48,6 +50,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    
+    [super setEditing:editing animated:animated];
+    
+    if(editing) {
+        //Do something for edit mode
+    }
+    
+    else {
+        //Do something for non-edit mode
+    }
+    
+    NSLog(@"edit was pressed");
+}
+//-(void)loadView
+//{
+//
+//}
 #pragma mark - NSFetchedResultsControllerDelegate
 -(void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
@@ -91,6 +111,12 @@
     return cell;
 }
 
+-(NSString *)tableView:(UITableView *)tableView
+titleForHeaderInSection:(NSInteger)section
+{
+    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
+    return [sectionInfo name];
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -177,7 +203,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     
     _fetchedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:fetchRequest
                                                                    managedObjectContext:coreDataStack.managedObjectContext
-                                                                     sectionNameKeyPath:nil
+                                                                     sectionNameKeyPath:@"sectionName"
                                                                               cacheName:nil];
     _fetchedResultsController.delegate = self;
     

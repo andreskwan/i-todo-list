@@ -20,4 +20,8 @@
 @property (nonatomic, retain) NSString * toDoDescription;
 @property (nonatomic) int16_t pomodoros;
 
+//will be calculated, not stored so we don't need to store it
+//on the DB
+@property (nonatomic, readonly) NSString * sectionName;
+
 @end

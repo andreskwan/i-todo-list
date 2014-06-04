@@ -4,7 +4,7 @@
 //
 //  Created by Andres Kwan on 5/14/14.
 //  Copyright (c) 2014 Kwan. All rights reserved.
-//
+//`*
 
 #import "KCAddToDoItemViewController.h"
 #import "KCCoreDataStack.h"
@@ -68,6 +68,7 @@
     [self insertDiaryEntry];
     [self dismissSelf];
 }
+
 - (IBAction)cancelWasPress:(id)sender {
     [self dismissSelf];
 }

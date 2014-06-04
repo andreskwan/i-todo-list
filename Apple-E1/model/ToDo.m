@@ -19,4 +19,16 @@
 @dynamic toDoDescription;
 @dynamic pomodoros;
 
+-(NSString *)sectionName
+{
+    //creates a representation of the data stored
+    NSDate * date = [NSDate dateWithTimeIntervalSince1970:self.dateCreated];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    //full mounth follow by the year
+    [dateFormatter setDateFormat:@"MMM yyyy"];
+    
+#warning for real time apps - cache should be used (reuse data - avoid calculate over and over again)
+    return [dateFormatter stringFromDate:date];
+}
 @end
