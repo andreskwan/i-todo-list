@@ -49,10 +49,10 @@
             </objects>
             <point key="canvasLocation" x="189" y="-240"/>
         </scene>
-        <!--Add To Do Item View Controller - Add To-Do Item-->
+        <!--EntryVC - Add To-Do Item-->
         <scene sceneID="1WL-vI-doM">
             <objects>
-                <viewController id="suD-Jc-q8y" customClass="KCAddToDoItemViewController" sceneMemberID="viewController">
+                <viewController id="suD-Jc-q8y" customClass="KCEntryVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MtU-wI-3eN"/>
                         <viewControllerLayoutGuide type="bottom" id="7bC-Xw-qlO"/>

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EA156655192A66D30031EB89 /* KCTodoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EA156654192A66D30031EB89 /* KCTodoItem.m */; };
-		EA86A17E192412AC008829ED /* KCAddToDoItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA86A17D192412AC008829ED /* KCAddToDoItemViewController.m */; };
+		EA86A17E192412AC008829ED /* KCEntryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA86A17D192412AC008829ED /* KCEntryVC.m */; };
 		EA86A18219241800008829ED /* KCToDoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA86A18119241800008829ED /* KCToDoListTableViewController.m */; };
 		EA9A2B4E191E0F8D00620478 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9A2B4D191E0F8D00620478 /* Foundation.framework */; };
 		EA9A2B50191E0F8D00620478 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9A2B4F191E0F8D00620478 /* CoreGraphics.framework */; };
@@ -43,8 +43,8 @@
 /* Begin PBXFileReference section */
 		EA156653192A66D30031EB89 /* KCTodoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCTodoItem.h; path = model/KCTodoItem.h; sourceTree = "<group>"; };
 		EA156654192A66D30031EB89 /* KCTodoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCTodoItem.m; path = model/KCTodoItem.m; sourceTree = "<group>"; };
-		EA86A17C192412AC008829ED /* KCAddToDoItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCAddToDoItemViewController.h; path = vc/KCAddToDoItemViewController.h; sourceTree = "<group>"; };
-		EA86A17D192412AC008829ED /* KCAddToDoItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCAddToDoItemViewController.m; path = vc/KCAddToDoItemViewController.m; sourceTree = "<group>"; };
+		EA86A17C192412AC008829ED /* KCEntryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCEntryVC.h; path = vc/KCEntryVC.h; sourceTree = "<group>"; };
+		EA86A17D192412AC008829ED /* KCEntryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCEntryVC.m; path = vc/KCEntryVC.m; sourceTree = "<group>"; };
 		EA86A18019241800008829ED /* KCToDoListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCToDoListTableViewController.h; path = vc/KCToDoListTableViewController.h; sourceTree = "<group>"; };
 		EA86A18119241800008829ED /* KCToDoListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCToDoListTableViewController.m; path = vc/KCToDoListTableViewController.m; sourceTree = "<group>"; };
 		EA9A2B4A191E0F8D00620478 /* PomoToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomoToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,8 +117,8 @@
 			children = (
 				EA86A18019241800008829ED /* KCToDoListTableViewController.h */,
 				EA86A18119241800008829ED /* KCToDoListTableViewController.m */,
-				EA86A17C192412AC008829ED /* KCAddToDoItemViewController.h */,
-				EA86A17D192412AC008829ED /* KCAddToDoItemViewController.m */,
+				EA86A17C192412AC008829ED /* KCEntryVC.h */,
+				EA86A17D192412AC008829ED /* KCEntryVC.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -308,7 +308,7 @@
 				EA9A2B63191E0F8D00620478 /* Apple_E1.xcdatamodeld in Sources */,
 				EA86A18219241800008829ED /* KCToDoListTableViewController.m in Sources */,
 				EA9A2B5C191E0F8D00620478 /* main.m in Sources */,
-				EA86A17E192412AC008829ED /* KCAddToDoItemViewController.m in Sources */,
+				EA86A17E192412AC008829ED /* KCEntryVC.m in Sources */,
 				EAE6261A193DDD5400C5E346 /* ToDo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

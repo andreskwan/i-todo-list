@@ -7,7 +7,7 @@
 //
 
 #import "KCToDoListTableViewController.h"
-#import "KCAddToDoItemViewController.h"
+#import "KCEntryVC.h"
 #import "ToDo.h"
 #import "KCCoreDataStack.h"
 

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "KCToDoItem.h"
-@interface KCAddToDoItemViewController : UIViewController
+@interface KCEntryVC : UIViewController
 @property KCTodoItem * todoItem;
 
 @end

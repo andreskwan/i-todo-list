@@ -6,18 +6,18 @@
 //  Copyright (c) 2014 Kwan. All rights reserved.
 //`*
 
-#import "KCAddToDoItemViewController.h"
+#import "KCEntryVC.h"
 #import "KCCoreDataStack.h"
 #import "ToDo.h"
 
-@interface KCAddToDoItemViewController ()
+@interface KCEntryVC ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UITextView *textViewDescription;
 
 
 @end
 
-@implementation KCAddToDoItemViewController
+@implementation KCEntryVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
