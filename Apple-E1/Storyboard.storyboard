@@ -29,6 +29,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Ixt-Vi-V9e" kind="modal" identifier="edit" id="Ayp-eG-aUe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -47,7 +50,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z8F-VS-hPQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="189" y="-240"/>
+            <point key="canvasLocation" x="196" y="-79"/>
         </scene>
         <!--EntryVC - Add To-Do Item-->
         <scene sceneID="1WL-vI-doM">
@@ -186,4 +189,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ayp-eG-aUe"/>
+    </inferredMetricsTieBreakers>
 </document>

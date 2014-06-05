@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "KCToDoItem.h"
+
+@class ToDo;
+
 @interface KCEntryVC : UIViewController
-@property KCTodoItem * todoItem;
+
+@property (nonatomic, strong) ToDo *entry;
 
 @end

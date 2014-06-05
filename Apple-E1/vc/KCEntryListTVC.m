@@ -124,6 +124,19 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     [coreDataStack saveContext];
 }
 
+/*
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
@@ -176,18 +189,7 @@ titleForHeaderInSection:(NSInteger)section
 }
 */
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+
 
 /*
 // Override to support rearranging the table view.
@@ -205,19 +207,31 @@ titleForHeaderInSection:(NSInteger)section
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
+
+    if ([segue.identifier isEqualToString:@"edit"]) {
+        // Get the new view controller using [segue destinationViewController].
+        UINavigationController *navController = [segue destinationViewController];
+        KCEntryVC * entryVC = (KCEntryVC *)navController.topViewController;
+        
+        // Get the entry obj in the tableViewCell
+        UITableViewCell *cell  = sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        entryVC.entry = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        
+    }
     // Pass the selected object to the new view controller.
+    
 }
-*/
 
 #pragma mark - Table view delegate
-- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView
+           editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //this is how I'm going to validate that this method is required
     //not needed!!! if I change for insert do not allow swipe-to-delete
