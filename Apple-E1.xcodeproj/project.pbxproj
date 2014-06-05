@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		EA156655192A66D30031EB89 /* KCTodoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EA156654192A66D30031EB89 /* KCTodoItem.m */; };
 		EA86A17E192412AC008829ED /* KCEntryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA86A17D192412AC008829ED /* KCEntryVC.m */; };
-		EA86A18219241800008829ED /* KCToDoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA86A18119241800008829ED /* KCToDoListTableViewController.m */; };
+		EA86A18219241800008829ED /* KCEntryListTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA86A18119241800008829ED /* KCEntryListTVC.m */; };
 		EA9A2B4E191E0F8D00620478 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9A2B4D191E0F8D00620478 /* Foundation.framework */; };
 		EA9A2B50191E0F8D00620478 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9A2B4F191E0F8D00620478 /* CoreGraphics.framework */; };
 		EA9A2B52191E0F8D00620478 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9A2B51191E0F8D00620478 /* UIKit.framework */; };
@@ -45,8 +45,8 @@
 		EA156654192A66D30031EB89 /* KCTodoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCTodoItem.m; path = model/KCTodoItem.m; sourceTree = "<group>"; };
 		EA86A17C192412AC008829ED /* KCEntryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCEntryVC.h; path = vc/KCEntryVC.h; sourceTree = "<group>"; };
 		EA86A17D192412AC008829ED /* KCEntryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCEntryVC.m; path = vc/KCEntryVC.m; sourceTree = "<group>"; };
-		EA86A18019241800008829ED /* KCToDoListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCToDoListTableViewController.h; path = vc/KCToDoListTableViewController.h; sourceTree = "<group>"; };
-		EA86A18119241800008829ED /* KCToDoListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCToDoListTableViewController.m; path = vc/KCToDoListTableViewController.m; sourceTree = "<group>"; };
+		EA86A18019241800008829ED /* KCEntryListTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCEntryListTVC.h; path = vc/KCEntryListTVC.h; sourceTree = "<group>"; };
+		EA86A18119241800008829ED /* KCEntryListTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCEntryListTVC.m; path = vc/KCEntryListTVC.m; sourceTree = "<group>"; };
 		EA9A2B4A191E0F8D00620478 /* PomoToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomoToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9A2B4D191E0F8D00620478 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA9A2B4F191E0F8D00620478 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -115,8 +115,8 @@
 		EA86A17F192412BD008829ED /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				EA86A18019241800008829ED /* KCToDoListTableViewController.h */,
-				EA86A18119241800008829ED /* KCToDoListTableViewController.m */,
+				EA86A18019241800008829ED /* KCEntryListTVC.h */,
+				EA86A18119241800008829ED /* KCEntryListTVC.m */,
 				EA86A17C192412AC008829ED /* KCEntryVC.h */,
 				EA86A17D192412AC008829ED /* KCEntryVC.m */,
 			);
@@ -306,7 +306,7 @@
 				EA9A2B60191E0F8D00620478 /* KCAppDelegate.m in Sources */,
 				EAE6260D193DD02B00C5E346 /* KCCoreDataStack.m in Sources */,
 				EA9A2B63191E0F8D00620478 /* Apple_E1.xcdatamodeld in Sources */,
-				EA86A18219241800008829ED /* KCToDoListTableViewController.m in Sources */,
+				EA86A18219241800008829ED /* KCEntryListTVC.m in Sources */,
 				EA9A2B5C191E0F8D00620478 /* main.m in Sources */,
 				EA86A17E192412AC008829ED /* KCEntryVC.m in Sources */,
 				EAE6261A193DDD5400C5E346 /* ToDo.m in Sources */,

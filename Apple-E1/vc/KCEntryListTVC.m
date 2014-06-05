@@ -6,16 +6,16 @@
 //  Copyright (c) 2014 Kwan. All rights reserved.
 //
 
-#import "KCToDoListTableViewController.h"
+#import "KCEntryListTVC.h"
 #import "KCEntryVC.h"
 #import "ToDo.h"
 #import "KCCoreDataStack.h"
 
-@interface KCToDoListTableViewController () <NSFetchedResultsControllerDelegate>
+@interface KCEntryListTVC () <NSFetchedResultsControllerDelegate>
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @end
 
-@implementation KCToDoListTableViewController
+@implementation KCEntryListTVC
 
 - (void) loadInitialData {
 
