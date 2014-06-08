@@ -26,6 +26,7 @@
 		EA9A2B77191E0F8E00620478 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA9A2B75191E0F8E00620478 /* InfoPlist.strings */; };
 		EA9A2B79191E0F8E00620478 /* Apple_E1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9A2B78191E0F8E00620478 /* Apple_E1Tests.m */; };
 		EA9A2B83191E115B00620478 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9A2B82191E115B00620478 /* Storyboard.storyboard */; };
+		EABC737D1944BE0D0013E872 /* KCNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EABC737C1944BE0D0013E872 /* KCNavVC.m */; };
 		EAE6260D193DD02B00C5E346 /* KCCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE6260C193DD02B00C5E346 /* KCCoreDataStack.m */; };
 		EAE6261A193DDD5400C5E346 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE62619193DDD5400C5E346 /* ToDo.m */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,8 @@
 		EA9A2B76191E0F8E00620478 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA9A2B78191E0F8E00620478 /* Apple_E1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Apple_E1Tests.m; sourceTree = "<group>"; };
 		EA9A2B82191E115B00620478 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		EABC737B1944BE0D0013E872 /* KCNavVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCNavVC.h; path = vc/KCNavVC.h; sourceTree = "<group>"; };
+		EABC737C1944BE0D0013E872 /* KCNavVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCNavVC.m; path = vc/KCNavVC.m; sourceTree = "<group>"; };
 		EAE6260B193DD02B00C5E346 /* KCCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCCoreDataStack.h; path = model/KCCoreDataStack.h; sourceTree = "<group>"; };
 		EAE6260C193DD02B00C5E346 /* KCCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCCoreDataStack.m; path = model/KCCoreDataStack.m; sourceTree = "<group>"; };
 		EAE62618193DDD5400C5E346 /* ToDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToDo.h; path = model/ToDo.h; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 		EA86A17F192412BD008829ED /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				EABC737B1944BE0D0013E872 /* KCNavVC.h */,
+				EABC737C1944BE0D0013E872 /* KCNavVC.m */,
 				EA86A18019241800008829ED /* KCEntryListTVC.h */,
 				EA86A18119241800008829ED /* KCEntryListTVC.m */,
 				EA86A17C192412AC008829ED /* KCEntryVC.h */,
@@ -302,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EABC737D1944BE0D0013E872 /* KCNavVC.m in Sources */,
 				EA156655192A66D30031EB89 /* KCTodoItem.m in Sources */,
 				EA9A2B60191E0F8D00620478 /* KCAppDelegate.m in Sources */,
 				EAE6260D193DD02B00C5E346 /* KCCoreDataStack.m in Sources */,

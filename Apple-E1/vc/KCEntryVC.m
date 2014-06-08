@@ -36,9 +36,10 @@
     // asociate with an entry from a cell of the entryTVC or an empty new one
     if (self.entry != nil) {
         //load data from the Obj
+        #warning ToDo - validate data - alert if something is missing
         self.textField.text           = self.entry.name;
         self.textViewDescription.text = self.entry.toDoDescription;
-        #warning ToDO - add the other entry fields
+        #warning ToDo - add the other entry fields
     }
 }
 
@@ -63,9 +64,11 @@
 #pragma mark CoreData Stack
 - (void) insertDiaryEntry
 {
+    #warning ToDo - create a method to do this - unit test here is the right thing to do
     KCCoreDataStack *coreDataStack = [KCCoreDataStack defaultStack];
     ToDo *entry = [NSEntityDescription insertNewObjectForEntityForName:@"ToDo"
                                                 inManagedObjectContext:coreDataStack.managedObjectContext];
+    #warning ToDo - validate data - how it should be done?
     entry.name            = self.textField.text;
     entry.toDoDescription = self.textViewDescription.text;
     entry.completed       = NO;
@@ -78,7 +81,7 @@
 {
     self.entry.name = self.textField.text;
     self.entry.toDoDescription = self.textViewDescription.text;
-    #warning ToDO - add the other entry fields
+    #warning ToDo - add the other entry fields
     
     KCCoreDataStack *coreDataStack = [KCCoreDataStack defaultStack];
     [coreDataStack saveContext];

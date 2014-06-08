@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dls-cw-PtN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="dls-cw-PtN">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -56,47 +56,43 @@
         <scene sceneID="1WL-vI-doM">
             <objects>
                 <viewController id="suD-Jc-q8y" customClass="KCEntryVC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="MtU-wI-3eN"/>
-                        <viewControllerLayoutGuide type="bottom" id="7bC-Xw-qlO"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="puf-ND-XX3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New To-Do Item" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iDJ-bi-1qR">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New To-Do Item" minimumFontSize="17" clearButtonMode="whileEditing" id="iDJ-bi-1qR">
                                 <rect key="frame" x="20" y="88" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Descripcion aqui" translatesAutoresizingMaskIntoConstraints="NO" id="jom-B7-hIh">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Why?" id="jom-B7-hIh">
                                 <rect key="frame" x="20" y="188" width="280" height="360"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eY-GJ-Y9I">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7eY-GJ-Y9I">
                                 <rect key="frame" x="20" y="159" width="140" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ZK-yO-DUa">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9ZK-yO-DUa">
                                 <rect key="frame" x="160" y="159" width="140" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bi3-Zf-lDw">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bi3-Zf-lDw">
                                 <rect key="frame" x="20" y="126" width="140" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pomodoros:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uf0-1T-2JM">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pomodoros:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uf0-1T-2JM">
                                 <rect key="frame" x="160" y="126" width="140" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -104,27 +100,6 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="bi3-Zf-lDw" firstAttribute="top" secondItem="MtU-wI-3eN" secondAttribute="bottom" constant="62" id="2yc-Fz-o8M"/>
-                            <constraint firstItem="iDJ-bi-1qR" firstAttribute="top" secondItem="MtU-wI-3eN" secondAttribute="bottom" constant="24" id="3Zy-k9-yxI"/>
-                            <constraint firstAttribute="trailing" secondItem="9ZK-yO-DUa" secondAttribute="trailing" constant="20" id="9HK-l1-216"/>
-                            <constraint firstAttribute="trailing" secondItem="uf0-1T-2JM" secondAttribute="trailing" constant="20" id="AfJ-R7-T6E"/>
-                            <constraint firstAttribute="bottom" secondItem="jom-B7-hIh" secondAttribute="bottom" constant="20" symbolic="YES" id="BHk-Nh-nrZ"/>
-                            <constraint firstItem="uf0-1T-2JM" firstAttribute="top" secondItem="MtU-wI-3eN" secondAttribute="bottom" constant="62" id="HD7-Pc-4hf"/>
-                            <constraint firstItem="iDJ-bi-1qR" firstAttribute="leading" secondItem="puf-ND-XX3" secondAttribute="leading" constant="20" id="I9P-qv-0On"/>
-                            <constraint firstItem="7eY-GJ-Y9I" firstAttribute="leading" secondItem="puf-ND-XX3" secondAttribute="leading" constant="20" id="IpU-9G-t1O"/>
-                            <constraint firstAttribute="trailing" secondItem="iDJ-bi-1qR" secondAttribute="trailing" constant="20" id="JuI-8q-qIG"/>
-                            <constraint firstItem="bi3-Zf-lDw" firstAttribute="leading" secondItem="puf-ND-XX3" secondAttribute="leading" constant="20" id="WVi-o9-OeW"/>
-                            <constraint firstItem="9ZK-yO-DUa" firstAttribute="leading" secondItem="puf-ND-XX3" secondAttribute="leading" constant="160" id="bn7-hL-nm8"/>
-                            <constraint firstAttribute="trailing" secondItem="jom-B7-hIh" secondAttribute="trailing" constant="20" id="bug-cb-qXj"/>
-                            <constraint firstAttribute="trailing" secondItem="7eY-GJ-Y9I" secondAttribute="trailing" constant="160" id="e9L-Oe-ZtV"/>
-                            <constraint firstAttribute="trailing" secondItem="bi3-Zf-lDw" secondAttribute="trailing" constant="160" id="etJ-Ie-AfY"/>
-                            <constraint firstItem="7eY-GJ-Y9I" firstAttribute="top" secondItem="MtU-wI-3eN" secondAttribute="bottom" constant="95" id="hlU-Wm-uBt"/>
-                            <constraint firstItem="uf0-1T-2JM" firstAttribute="leading" secondItem="puf-ND-XX3" secondAttribute="leading" constant="160" id="lMZ-p8-s42"/>
-                            <constraint firstItem="9ZK-yO-DUa" firstAttribute="top" secondItem="MtU-wI-3eN" secondAttribute="bottom" constant="95" id="mRL-4b-5TY"/>
-                            <constraint firstItem="jom-B7-hIh" firstAttribute="leading" secondItem="puf-ND-XX3" secondAttribute="leading" constant="20" id="rer-zu-l8m"/>
-                            <constraint firstItem="jom-B7-hIh" firstAttribute="top" secondItem="MtU-wI-3eN" secondAttribute="bottom" constant="124" id="zFt-LU-MSu"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add To-Do Item" id="Um9-kY-a39">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="241-Y0-zP8">
@@ -147,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="626" y="-908"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--NavVC-->
         <scene sceneID="Isz-MW-QHm">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dls-cw-PtN" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dls-cw-PtN" customClass="KCNavVC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jsJ-wo-2v9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -165,10 +140,10 @@
             </objects>
             <point key="canvasLocation" x="-279" y="-240"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--NavVC-->
         <scene sceneID="y5N-Et-q03">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ixt-Vi-V9e" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ixt-Vi-V9e" customClass="KCNavVC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qyg-Dd-Nip">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
