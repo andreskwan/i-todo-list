@@ -27,8 +27,9 @@
 		EA9A2B79191E0F8E00620478 /* Apple_E1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9A2B78191E0F8E00620478 /* Apple_E1Tests.m */; };
 		EA9A2B83191E115B00620478 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9A2B82191E115B00620478 /* Storyboard.storyboard */; };
 		EABC737D1944BE0D0013E872 /* KCNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EABC737C1944BE0D0013E872 /* KCNavVC.m */; };
+		EABC73801944CA5E0013E872 /* KCEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EABC737F1944CA5E0013E872 /* KCEntryCell.m */; };
+		EABC73831944E9020013E872 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = EABC73821944E9020013E872 /* ToDo.m */; };
 		EAE6260D193DD02B00C5E346 /* KCCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE6260C193DD02B00C5E346 /* KCCoreDataStack.m */; };
-		EAE6261A193DDD5400C5E346 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE62619193DDD5400C5E346 /* ToDo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,10 +70,12 @@
 		EA9A2B82191E115B00620478 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		EABC737B1944BE0D0013E872 /* KCNavVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCNavVC.h; path = vc/KCNavVC.h; sourceTree = "<group>"; };
 		EABC737C1944BE0D0013E872 /* KCNavVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCNavVC.m; path = vc/KCNavVC.m; sourceTree = "<group>"; };
+		EABC737E1944CA5E0013E872 /* KCEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCEntryCell.h; sourceTree = "<group>"; };
+		EABC737F1944CA5E0013E872 /* KCEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCEntryCell.m; sourceTree = "<group>"; };
+		EABC73811944E9020013E872 /* ToDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToDo.h; path = model/ToDo.h; sourceTree = "<group>"; };
+		EABC73821944E9020013E872 /* ToDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToDo.m; path = model/ToDo.m; sourceTree = "<group>"; };
 		EAE6260B193DD02B00C5E346 /* KCCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCCoreDataStack.h; path = model/KCCoreDataStack.h; sourceTree = "<group>"; };
 		EAE6260C193DD02B00C5E346 /* KCCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCCoreDataStack.m; path = model/KCCoreDataStack.m; sourceTree = "<group>"; };
-		EAE62618193DDD5400C5E346 /* ToDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToDo.h; path = model/ToDo.h; sourceTree = "<group>"; };
-		EAE62619193DDD5400C5E346 /* ToDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToDo.m; path = model/ToDo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,11 +107,11 @@
 		EA156656192A66DA0031EB89 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				EABC73811944E9020013E872 /* ToDo.h */,
+				EABC73821944E9020013E872 /* ToDo.m */,
 				EAE6260B193DD02B00C5E346 /* KCCoreDataStack.h */,
 				EAE6260C193DD02B00C5E346 /* KCCoreDataStack.m */,
 				EA9A2B61191E0F8D00620478 /* Apple_E1.xcdatamodeld */,
-				EAE62618193DDD5400C5E346 /* ToDo.h */,
-				EAE62619193DDD5400C5E346 /* ToDo.m */,
 				EA156653192A66D30031EB89 /* KCTodoItem.h */,
 				EA156654192A66D30031EB89 /* KCTodoItem.m */,
 			);
@@ -204,6 +207,8 @@
 		EAE62611193DD22000C5E346 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				EABC737E1944CA5E0013E872 /* KCEntryCell.h */,
+				EABC737F1944CA5E0013E872 /* KCEntryCell.m */,
 				EA9A2B64191E0F8D00620478 /* Images.xcassets */,
 				EA9A2B82191E115B00620478 /* Storyboard.storyboard */,
 			);
@@ -312,10 +317,11 @@
 				EA9A2B60191E0F8D00620478 /* KCAppDelegate.m in Sources */,
 				EAE6260D193DD02B00C5E346 /* KCCoreDataStack.m in Sources */,
 				EA9A2B63191E0F8D00620478 /* Apple_E1.xcdatamodeld in Sources */,
+				EABC73831944E9020013E872 /* ToDo.m in Sources */,
 				EA86A18219241800008829ED /* KCEntryListTVC.m in Sources */,
+				EABC73801944CA5E0013E872 /* KCEntryCell.m in Sources */,
 				EA9A2B5C191E0F8D00620478 /* main.m in Sources */,
 				EA86A17E192412AC008829ED /* KCEntryVC.m in Sources */,
-				EAE6261A193DDD5400C5E346 /* ToDo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

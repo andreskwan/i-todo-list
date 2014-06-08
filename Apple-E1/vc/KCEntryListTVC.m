@@ -10,6 +10,7 @@
 #import "KCEntryVC.h"
 #import "ToDo.h"
 #import "KCCoreDataStack.h"
+#import "KCEntryCell.h"
 
 @interface KCEntryListTVC () <NSFetchedResultsControllerDelegate>
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
@@ -156,19 +157,20 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
     static NSString *CellIdentifier = @"Cell";
     ToDo * todoEntry = [self.fetchedResultsController objectAtIndexPath:indexPath];
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
+    KCEntryCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
                                                             forIndexPath:indexPath];
-    cell.textLabel.text = todoEntry.name;
-    if (todoEntry.completed) {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    } else {
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }
-    // Configure the cell...
+//    cell.textLabel.text = todoEntry.name;
+    [cell configureCellForEntry:todoEntry];
+    
+//    if (todoEntry.completed) {
+//        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+//    } else {
+//        cell.accessoryType = UITableViewCellAccessoryNone;
+//    }
+//    // Configure the cell...
     
     return cell;
 }
@@ -270,17 +272,24 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     }
     KCCoreDataStack * coreDataStack = [KCCoreDataStack defaultStack];
     NSFetchRequest  * fetchRequest  = [self entryListFetchRequest];
-    
+    #warning ToDo - solve sectionName problem @"sectionName"
     _fetchedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:fetchRequest
                                                                    managedObjectContext:coreDataStack.managedObjectContext
-                                                                     sectionNameKeyPath:@"sectionName"
+                                                                     sectionNameKeyPath:nil
                                                                               cacheName:nil];
     _fetchedResultsController.delegate = self;
     
     return _fetchedResultsController;
 }
 
+#pragma mark custom View Cell 
 
+-(CGFloat)tableView:(UITableView *)tableView
+heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ToDo *entry = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    return [KCEntryCell heightForEntry:entry];
+}
 
 
 
